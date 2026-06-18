@@ -1,5 +1,6 @@
 ---
 import "@/styles/index.css"
+import AppLayout from "./AppLayout"
 ---
 
 <!doctype html>
@@ -27,6 +28,8 @@ import "@/styles/index.css"
    </head>
 
    <body>
-      <slot />
+      <AppLayout client:only="react">
+         <slot />
+      </AppLayout>
    </body>
 </html>
