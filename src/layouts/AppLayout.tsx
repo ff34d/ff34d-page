@@ -10,9 +10,10 @@ function AppLayout({ children }: AppLayoutProps) {
    return (
       <ThemeProvider defaultTheme="dark">
          <Header />
-         <main>{children}</main>
+         <main className="mx-auto w-full max-w-md px-4 md:max-w-lg lg:max-w-xl">
+            {children}
+         </main>
       </ThemeProvider>
    )
 }
-
 export default AppLayout
