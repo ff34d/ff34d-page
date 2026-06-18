@@ -8,6 +8,7 @@
    "scripts": {
       "dev": "astro dev",
       "format": "prettier . --write --ignore-unknown",
+      "lint": "eslint . --fix",
       "build": "astro build",
       "preview": "astro preview",
       "astro": "astro"
