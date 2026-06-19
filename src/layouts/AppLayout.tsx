@@ -1,4 +1,5 @@
 import { Box } from "@/components/ui/box"
+import { Footer } from "@/components/widgets/Footer"
 import Header from "@/components/widgets/Header"
 import { ThemeProvider } from "@/providers"
 import type { ReactNode } from "react"
@@ -12,6 +13,7 @@ function AppLayout({ children }: AppLayoutProps) {
       <ThemeProvider defaultTheme="dark">
          <Header />
          <Box as="main">{children}</Box>
+         <Footer />
       </ThemeProvider>
    )
 }
