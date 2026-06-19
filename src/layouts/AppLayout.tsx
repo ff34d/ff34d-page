@@ -10,7 +10,7 @@ function AppLayout({ children }: AppLayoutProps) {
    return (
       <ThemeProvider defaultTheme="dark">
          <Header />
-         <main className="mx-auto w-full max-w-md px-4 md:max-w-lg lg:max-w-xl">
+         <main className="mx-auto w-full max-w-md px-4 md:max-w-xl lg:max-w-2xl">
             {children}
          </main>
       </ThemeProvider>
