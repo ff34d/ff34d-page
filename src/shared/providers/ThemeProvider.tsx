@@ -1,4 +1,4 @@
-import { _STORAGE_KEY_THEME } from "@/configs"
+import { _STORAGE_KEY_THEME } from "@/shared/configs"
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react"
 
 export type ThemeMode = "dark" | "light"

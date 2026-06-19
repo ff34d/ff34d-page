@@ -1,4 +1,4 @@
-import { useTheme } from "@/providers/ThemeProvider"
+import { useTheme } from "@/shared/providers/ThemeProvider"
 import { MoonIcon, SunMediumIcon } from "lucide-react"
 import { useState } from "react"
 import { Switch } from "../ui/switch"

@@ -1,7 +1,8 @@
 import { Box } from "@/components/ui/box"
 import { Footer } from "@/components/widgets/Footer"
 import Header from "@/components/widgets/Header"
-import { ThemeProvider } from "@/providers"
+import { ThemeProvider } from "@/shared/providers"
+import "@/shared/styles/index.css"
 import type { ReactNode } from "react"
 
 interface AppLayoutProps {
