@@ -9,6 +9,11 @@ body {
    height: 100%;
 }
 
+.main {
+   padding-top: 2.5rem;
+   padding-bottom: 2.5rem;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -55,7 +60,7 @@ body {
 }
 
 :root {
-   --background: oklch(1 0 0);
+   --background: #d6d6d6;
    --foreground: oklch(0.145 0 0);
    --card: oklch(1 0 0);
    --card-foreground: oklch(0.145 0 0);
@@ -87,6 +92,9 @@ body {
    --sidebar-accent-foreground: oklch(0.205 0 0);
    --sidebar-border: oklch(0.922 0 0);
    --sidebar-ring: oklch(0.708 0 0);
+
+   --accent-green: #2db381;
+   --hr: #00000010;
 }
 
 .dark {
@@ -121,6 +129,9 @@ body {
    --sidebar-accent-foreground: oklch(0.985 0 0);
    --sidebar-border: oklch(1 0 0 / 10%);
    --sidebar-ring: oklch(0.556 0 0);
+
+   --accent-green: #34d399;
+   --hr: #ffffff10;
 }
 
 @layer base {

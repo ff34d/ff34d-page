@@ -11,13 +11,5 @@ export function Box({ as: Component = "div", children, className }: BoxProps) {
    // eslint-disable-next-line
    const Tag = Component as any // Astro-react fix type error
 
-   return (
-      <Tag
-         className={cn(
-            className,
-            "mx-auto w-full max-w-md px-4 md:max-w-xl lg:max-w-2xl",
-         )}>
-         {children}
-      </Tag>
-   )
+   return <Tag className={cn(className, "mx-auto w-full max-w-3xl px-4")}>{children}</Tag>
 }

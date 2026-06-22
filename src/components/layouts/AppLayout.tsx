@@ -13,7 +13,11 @@ function AppLayout({ children }: AppLayoutProps) {
    return (
       <ThemeProvider defaultTheme="dark">
          <Header />
-         <Box as="main">{children}</Box>
+         <Box
+            as="main"
+            className="main">
+            {children}
+         </Box>
          <Footer />
       </ThemeProvider>
    )
