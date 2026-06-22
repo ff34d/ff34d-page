@@ -1,0 +1,63 @@
+.content {
+   :is(h1, h2, h3, h4, h5, h6) {
+      margin: 1rem 0;
+      font-weight: bold;
+      line-height: 1.5;
+      font-size: var(--text-lg);
+      line-height: var(--leading-relaxed);
+
+      &::before {
+         content: ">";
+         margin-right: 0.5rem;
+      }
+   }
+
+   h1 {
+      font-size: var(--text-xl);
+   }
+
+   mark {
+      color: var(--accent-green);
+      background: none;
+   }
+
+   p {
+      margin: 1rem 0;
+      font-size: var(--text-sm);
+   }
+
+   ul {
+      list-style: none;
+      margin: 1rem 0;
+      font-size: var(--text-sm);
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.45rem;
+   }
+
+   small {
+      color: var(--muted-foreground);
+      font-size: var(--text-md);
+   }
+
+   strong p {
+      font-weight: normal;
+      font-size: var(--text-xl);
+      margin: 0;
+   }
+
+   hr {
+      margin: 2.5rem 0;
+      opacity: 0.1;
+      border-color: var(--foreground);
+   }
+
+   a {
+      transition: var(--default-transition-duration)
+         var(--default-transition-timing-function);
+
+      &:hover {
+         color: var(--accent-green);
+      }
+   }
+}

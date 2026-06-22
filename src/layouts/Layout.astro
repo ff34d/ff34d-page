@@ -1,3 +1,7 @@
+---
+import AppLayout from "@/components/layouts/AppLayout"
+---
+
 <!doctype html>
 <html lang="en">
    <head>
@@ -19,18 +23,12 @@
          name="generator"
          content={Astro.generator}
       />
-      <title>Astro Basics</title>
+      <title>Vladimir Volkov</title>
    </head>
+
    <body>
-      <slot />
+      <AppLayout client:only="react">
+         <slot />
+      </AppLayout>
    </body>
 </html>
-
-<style>
-   html,
-   body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-   }
-</style>
