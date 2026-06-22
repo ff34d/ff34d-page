@@ -95,6 +95,7 @@ body {
 
    --accent-green: #2db381;
    --hr: #00000010;
+   --header: #00000050;
 }
 
 .dark {
@@ -132,6 +133,7 @@ body {
 
    --accent-green: #34d399;
    --hr: #ffffff10;
+   --header: #00000010;
 }
 
 @layer base {
