@@ -1,15 +1,15 @@
-import { useTheme } from "@/components/providers/ThemeProvider"
+import { theme } from "@/react/lib/theme"
 import { MoonIcon, SunMediumIcon } from "lucide-react"
 import { useState } from "react"
-import { Switch } from "../ui/switch"
+import { Switch } from "./ui/switch"
 
 function ThemeSwitch() {
-   const themeContext = useTheme()
-   const [isActive, setIsActive] = useState<boolean>(themeContext.theme === "dark")
+   const { toggle, getCurrent } = theme()
+   const [isActive, setIsActive] = useState<boolean>(getCurrent() === "dark")
 
    const handleCheckedChange = (value: boolean) => {
       setIsActive(value)
-      themeContext.toggleTheme()
+      toggle()
    }
 
    return (

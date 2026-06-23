@@ -1,0 +1,104 @@
+---
+import Footer from "@/components/Footer.astro"
+import Header from "@/components/Header.astro"
+import "@/styles/index.css"
+
+const TITLE = "Vladimir Volkov (ff34d)"
+const DESCRIPTION = "Vladimir Volkov (ff34d) - Frontend-engineer"
+---
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Base -->
+      <title>{TITLE}</title>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width"
+      />
+      <meta
+         name="description"
+         content={DESCRIPTION}
+      />
+      <meta
+         name="generator"
+         content={Astro.generator}
+      />
+
+      <!-- Open Graph -->
+      <meta
+         property="og:title"
+         content={TITLE}
+      />
+      <meta
+         property="og:description"
+         content={DESCRIPTION}
+      />
+      <meta
+         property="og:type"
+         content="website"
+      />
+      <meta
+         property="og:url"
+         content={Astro.url}
+      />
+      <meta
+         property="og:image"
+         content={new URL("favicon.svg", Astro.site).href}
+      />
+
+      <!-- Twitter -->
+      <meta
+         name="twitter:card"
+         content="summary_large_image"
+      />
+      <meta
+         name="twitter:title"
+         content={TITLE}
+      />
+      <meta
+         name="twitter:description"
+         content={DESCRIPTION}
+      />
+      <meta
+         name="twitter:image"
+         content={new URL("favicon.svg", Astro.site).href}
+      />
+
+      <!-- Links -->
+      <link
+         rel="icon"
+         type="image/svg+xml"
+         href="/favicon.svg"
+      />
+      <link
+         rel="icon"
+         href="/favicon.ico"
+      />
+      <link
+         rel="canonical"
+         href={Astro.url}
+      />
+
+      <!-- Initialize theme -->
+      <script is:inline>
+         ;(function () {
+            const stored = localStorage.getItem("_theme")
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+            const theme = stored || (prefersDark ? "dark" : "light")
+            document.documentElement.classList.add(theme)
+         })()
+      </script>
+   </head>
+
+   <body>
+      <Header />
+
+      <main class="box content">
+         <slot />
+      </main>
+
+      <Footer />
+   </body>
+</html>
