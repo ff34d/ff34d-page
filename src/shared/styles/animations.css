@@ -1,0 +1,37 @@
+.animation-typing {
+   animation: typeWriter 2.5s steps(40, end) forwards;
+   overflow: hidden;
+   white-space: nowrap;
+   width: 0;
+
+   &::after {
+      display: inline-block;
+      vertical-align: text-top;
+      margin: 0 0.25rem;
+      content: "";
+      width: 0.2rem;
+      height: 1.5rem;
+      background-color: var(--accent-green);
+      animation: blinkCursor 0.8s infinite;
+   }
+}
+
+@keyframes typeWriter {
+   from {
+      width: 0%;
+   }
+   to {
+      width: 100%;
+   }
+}
+
+@keyframes blinkCursor {
+   from,
+   to {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: 1;
+   }
+}
