@@ -1,0 +1,50 @@
+---
+import Footer from "@/components/Footer.astro"
+import Header from "@/components/Header.astro"
+import "@/styles/index.css"
+---
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width"
+      />
+      <link
+         rel="icon"
+         type="image/svg+xml"
+         href="/favicon.svg"
+      />
+      <link
+         rel="icon"
+         href="/favicon.ico"
+      />
+      <meta
+         name="generator"
+         content={Astro.generator}
+      />
+      <title>Vladimir Volkov</title>
+
+      <!-- Initialize theme -->
+      <script is:inline>
+         ;(function () {
+            const stored = localStorage.getItem("_theme")
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+            const theme = stored || (prefersDark ? "dark" : "light")
+            document.documentElement.classList.add(theme)
+         })()
+      </script>
+   </head>
+
+   <body>
+      <Header />
+
+      <main class="box content">
+         <slot />
+      </main>
+
+      <Footer />
+   </body>
+</html>

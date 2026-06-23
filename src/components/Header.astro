@@ -1,0 +1,19 @@
+---
+import ThemeSwitch from "@/react/components/ThemeSwitch"
+---
+
+<header
+   class="sticky top-0 left-0 z-10 w-full border-b backdrop-blur-xs"
+   style={{ backgroundColor: "var(--header)" }}>
+   <div class="box flex items-center justify-between py-6">
+      <h1 class="text-xl">
+         <span
+            class="mr-0.5"
+            style={{ color: "var(--accent-green)" }}>
+            ~
+         </span>
+         <span class="font-medium text-white">VV</span>
+      </h1>
+      <ThemeSwitch client:only="react" />
+   </div>
+</header>
