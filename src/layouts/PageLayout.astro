@@ -5,6 +5,9 @@ import "@/styles/index.css"
 
 const TITLE = "Vladimir Volkov (ff34d)"
 const DESCRIPTION = "Vladimir Volkov (ff34d) - Frontend-engineer"
+
+const FAVICON_SVG_URL = new URL("favicon.svg", Astro.url).href
+const FAVICON_ICO_URL = new URL("favicon.ico", Astro.url).href
 ---
 
 <!doctype html>
@@ -45,7 +48,7 @@ const DESCRIPTION = "Vladimir Volkov (ff34d) - Frontend-engineer"
       />
       <meta
          property="og:image"
-         content={new URL("favicon.svg", Astro.site).href}
+         content={FAVICON_SVG_URL}
       />
 
       <!-- Twitter -->
@@ -63,18 +66,18 @@ const DESCRIPTION = "Vladimir Volkov (ff34d) - Frontend-engineer"
       />
       <meta
          name="twitter:image"
-         content={new URL("favicon.svg", Astro.site).href}
+         content={FAVICON_SVG_URL}
       />
 
       <!-- Links -->
       <link
          rel="icon"
          type="image/svg+xml"
-         href="/favicon.svg"
+         href={FAVICON_SVG_URL}
       />
       <link
          rel="icon"
-         href="/favicon.ico"
+         href={FAVICON_ICO_URL}
       />
       <link
          rel="canonical"
