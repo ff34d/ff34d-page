@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ff34d.github.io/ff34d-page/sitemap-index.xml

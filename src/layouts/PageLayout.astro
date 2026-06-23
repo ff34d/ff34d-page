@@ -8,6 +8,8 @@ const DESCRIPTION = "Vladimir Volkov (ff34d) - Frontend-engineer"
 
 const FAVICON_SVG_URL = new URL("favicon.svg", Astro.url).href
 const FAVICON_ICO_URL = new URL("favicon.ico", Astro.url).href
+
+const META_IMAGE = new URL("icon512_maskable.png", Astro.url).href
 ---
 
 <!doctype html>
@@ -48,7 +50,7 @@ const FAVICON_ICO_URL = new URL("favicon.ico", Astro.url).href
       />
       <meta
          property="og:image"
-         content={FAVICON_SVG_URL}
+         content={META_IMAGE}
       />
 
       <!-- Twitter -->
@@ -66,7 +68,7 @@ const FAVICON_ICO_URL = new URL("favicon.ico", Astro.url).href
       />
       <meta
          name="twitter:image"
-         content={FAVICON_SVG_URL}
+         content={META_IMAGE}
       />
 
       <!-- Links -->
@@ -82,6 +84,24 @@ const FAVICON_ICO_URL = new URL("favicon.ico", Astro.url).href
       <link
          rel="canonical"
          href={Astro.url}
+      />
+
+      <!-- Scheme ld -->
+      <script
+         type="application/ld+json"
+         set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: TITLE,
+            description: DESCRIPTION,
+            image: META_IMAGE,
+            url: Astro.url.toString(),
+            publisher: {
+               "@type": "Person",
+               name: "Vladimir Volkov",
+               url: "https://ff34d.github.io/ff34d-page/",
+            },
+         })}
       />
 
       <!-- Initialize theme -->
