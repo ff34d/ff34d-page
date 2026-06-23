@@ -130,6 +130,13 @@ const META_MANIFEST_URL = new URL("site.webmanifest", Astro.url).href
                "@type": "Person",
                name: "Vladimir Volkov",
                url: "https://ff34d.github.io/ff34d-page/",
+               image: {
+                  "@type": "ImageObject",
+                  url: META_IMAGE_URL,
+                  width: "500",
+                  height: "500",
+               },
+               sameAs: ["https://github.com/ff34d"],
             },
          })}
       />
