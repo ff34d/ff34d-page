@@ -1,3 +1,37 @@
+.dust {
+   background-color: var(--bg);
+   position: absolute;
+   top: var(--sy);
+   left: var(--sx);
+   display: block;
+   z-index: -1;
+   animation: floatDust 25s ease-in-out infinite;
+   width: var(--w);
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   transform-origin: center;
+   pointer-events: none;
+   filter: blur(1px);
+   opacity: 0;
+}
+
+@keyframes floatDust {
+   0% {
+      opacity: 0;
+      transform: translate(0, 0) scale(0.5);
+   }
+   20% {
+      opacity: 0.8;
+   }
+   80% {
+      opacity: 0.6;
+   }
+   100% {
+      opacity: 0;
+      transform: translate(var(--ex), var(--ey)) scale(1.5);
+   }
+}
+
 .glow {
    position: relative;
 
@@ -7,7 +41,7 @@
       left: 50%;
       transform: translate(-50%, -30%);
       position: fixed;
-      z-index: 0;
+      z-index: -1;
       width: 100%;
       aspect-ratio: 1/1;
       max-width: var(--container-3xl);

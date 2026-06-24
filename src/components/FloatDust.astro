@@ -1,0 +1,20 @@
+---
+import { type Dust, DustConfig } from "@/configs/dust.config"
+
+function createDustStyle(item: Dust, index: number) {
+   return `--bg: ${item.bg}; --sx: ${item.sx}vh; --sy: ${item.sy}vh; --ex: ${item.ex}vh; --ey: ${item.ey}vh; --w: ${item.w}rem; animation-delay: ${index / 2}s`
+}
+---
+
+<div class="fixed top-0 left-0 h-full w-screen overflow-hidden">
+   {
+      DustConfig.map((item, index) => {
+         return (
+            <div
+               class="dust"
+               style={createDustStyle(item, index)}
+            />
+         )
+      })
+   }
+</div>
